@@ -1,0 +1,48 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/support/**/*'
+    - '**/*.gemspec'
+  TargetRubyVersion: 2.6
+Bundler/OrderedGems:
+  Enabled: true
+Gemspec/OrderedDependencies:
+  Enabled: true
+Layout/ClosingParenthesisIndentation:
+  Enabled: true
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'tmp/**/*'
+Metrics/LineLength:
+  Enabled: true
+Naming/FileName:
+  Enabled: true
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+Style/AndOr:
+  Enabled: true
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/ExpandPathArguments:
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/IndentHeredoc:
+  Enabled: true
+Style/MixinGrouping:
+  Exclude:
+    - 'spec/support/**/*'
+Style/RaiseArgs:
+  Enabled: true
+Style/RegexpLiteral:
+  Enabled: true
+Style/StringLiterals:
+  Enabled: true
