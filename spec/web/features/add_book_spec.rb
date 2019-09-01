@@ -8,16 +8,19 @@ RSpec.describe 'Add a book' do
   end
 
   it 'can create a new book' do
-    visit '/book/new'
+    visit '/books/new'
+
+    expect(page).to have_content('Title')
+    expect(page).to have_content('Author')
 
     within 'form#book-form' do
-      fill_in 'Titie', with: 'New book'
+      fill_in 'Title', with: 'New book'
       fill_in 'Author', with: 'Some author'
 
       click_button 'Create'
     end
 
     expect(page).to have_current_path('/books')
-    expect(page).to have_current('New book')
+    expect(page).to have_content('New book')
   end
 end
