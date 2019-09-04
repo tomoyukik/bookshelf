@@ -4,6 +4,6 @@ option:
   project_root: config_path
 
 syncs:
-  bookshelf-volume:
+  bookshelf-sync:
     src: .
     sync_strategy: unison

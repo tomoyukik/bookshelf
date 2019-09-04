@@ -1,5 +1,22 @@
 version: '3.7'
 
+volumes:
+  bundle:
+    name: bookshelf-bundle
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/koboritomoyuki/Programs/Docker/data_volumes/bundle
+      o: bind
+  bookshelf:
+    name: bookshelf-local
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/koboritomoyuki/Programs/bookshelf
+
+      o: bind
+
 services:
   app:
     build: ./docker
@@ -9,7 +26,8 @@ services:
       HANAMI_ENV: development
       BUNDLE_APP_CONFIG: /bookshelf/.bundle
     volumes:
-      - .:/bookshelf
+      - bookshelf:/bookshelf
+      - bundle:/vendor/bundle
     ports:
       - 2300
     command: 'bundle exec hanami server --host 0.0.0.0'
