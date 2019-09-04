@@ -3,3 +3,8 @@
 /tmp
 /vendor
 /.docker-sync
+/docker-compose-dev.yml
+/docker-compose.yml
+/.gitignore
+/.bundle
+docker-compose.yml
