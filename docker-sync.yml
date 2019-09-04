@@ -1,9 +1,0 @@
-version: 2
-
-option:
-  project_root: config_path
-
-syncs:
-  bookshelf-sync:
-    src: .
-    sync_strategy: unison
